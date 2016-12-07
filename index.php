@@ -28,8 +28,10 @@
 							<h1>Nicolas Fley</h1>
 							<p>French Centrale Supelec Student</p>
 						</header>
-						<a href="https://goo.gl/forms/DsIgDcYkeGyMb2W12">Questionnaire</a><br><br>
+						<a href="#" onclick="dl('res/CV_Nicolas_FLEY_2016_12_04_photo')">Mon CV</a><br><br>
 <!--
+						<a href="https://goo.gl/forms/DsIgDcYkeGyMb2W12">Questionnaire</a><br><br>
+
 						<hr />
 						<h2>Extra Stuff!</h2>
 						<form method="post" action="#">
@@ -89,6 +91,10 @@
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 			<script>
+				function dl(href){
+					href=href+'.pdf';
+					if(confirm("Télécharger mon CV ?"))window.location.assign(href);				
+				}
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
